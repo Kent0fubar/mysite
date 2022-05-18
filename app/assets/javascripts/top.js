@@ -104,16 +104,22 @@ $(function () {
         //Processing at selection
         $('.ab-top').on('click', function() {
             var $selectedMenuIndex = $('.selected').index('.select-menu ul li');
-            if ($(this).hasClass('select-mode')) {
+            if ($(this).hasClass('select-mode') && $('.menu3').hasClass('selected')) {
                 $(this).removeClass('select-mode');
                 $('.menu').removeClass('selected');
                 $('.title').removeClass('start');
                 $('.game-screen').css({'background-color': 'black', 'color': '#fff'})
                 $('.screen').eq($selectedMenuIndex).addClass('view-mode').css('display', 'block');
                 $('.select-menu').css('display', 'none');
-            } else if ($($selectedMenuIndex === 2)) {
                 $('.cross-right').addClass('language-select-mode');
                 $('.cross-left').addClass('language-select-mode');
+            } else if ($(this).hasClass('select-mode')) {
+                $(this).removeClass('select-mode');
+                $('.menu').removeClass('selected');
+                $('.title').removeClass('start');
+                $('.game-screen').css({'background-color': 'black', 'color': '#fff'})
+                $('.screen').eq($selectedMenuIndex).addClass('view-mode').css('display', 'block');
+                $('.select-menu').css('display', 'none');
             }
         });
     });
