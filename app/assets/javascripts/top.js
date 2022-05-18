@@ -1,7 +1,4 @@
 $(function () {
-    function screenHandler() {
-        $screenIndex = $('.selected').index('.select-menu ul li');
-    }
         // when A-btn is clicked on the start screen
         $('.ab-top').on('click', function () {
             if ($('.title').hasClass('start')) {
@@ -19,35 +16,22 @@ $(function () {
         
         // B-btn clicked
         $('.ab-left').on('click', function () {
+            var $screenIndex = $('.view-mode').index('.screen-ul li');
             if ($('.ab-top').hasClass('select-mode')) {
             $('.ab-top').removeClass('select-mode');
             $('.menu').removeClass('selected');
             $('.select-menu').hide();
             $('.title').show();
             $('.title').addClass('start');
-            } else if($('.introduction-screen').hasClass('view-mode')) {
+            } else if($('.screen').hasClass('view-mode')) {
                 $('.game-screen').css({'background-color': '#8fbc8f', 'color': 'black'})
-                $('.introduction-screen').css('display', 'none').removeClass('view-mode');
+                $('.screen').eq($screenIndex).css('display', 'none').removeClass('view-mode');
                 $('.select-menu').css('display', 'block');
-                $('.ab-top').addClass('select-mode');
-                $('.menu1').addClass('selected');
-            }
-            else if($('.status-screen').hasClass('view-mode')) {
-                $('.game-screen').css({'background-color': '#8fbc8f', 'color': 'black'})
-                $('.status-screen').css('display', 'none').removeClass('view-mode');
-                $('.select-menu').css('display', 'block');
-                $('.ab-top').addClass('select-mode');
-                $('.menu1').addClass('selected');
-            } else if($('.setting-screen').hasClass('view-mode')) {
-                $('.game-screen').css({'background-color': '#8fbc8f', 'color': 'black'})
                 $('.setting-screen').css('display', 'none').removeClass('view-mode');
                 $('.cross-right').removeClass('language-select-mode');
                 $('.cross-left').removeClass('language-select-mode');
-                $('.select-menu').css('display', 'block');
                 $('.ab-top').addClass('select-mode');
                 $('.menu1').addClass('selected');
-            } else {
-
             }
         });
 
