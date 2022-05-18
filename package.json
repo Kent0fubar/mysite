@@ -1,0 +1,8 @@
+{
+  "name": "sample_app",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "nes.css": "^2.3.0"
+  }
+}

@@ -1,0 +1,400 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  
+  ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2d3133;
+    font-size: 14px;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  input {
+    background-color: transparent;
+    outline-width: 0;
+  }
+  
+  form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+  }  
+
+/*layout ======================*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: darkcyan !important;
+}
+
+.jp {
+    display: none;
+    font-family: 'PixelMplus10-bold' !important;
+    font-size: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 400px;
+    min-width: 680px;
+    max-width: 700px;
+    background-color: #eee8aa;
+    background-size: cover;
+    border: 10px solid #dc143c;
+    box-sizing: border-box;
+}
+
+.game-screen {
+    background-color: #8fbc8f;
+    width: 63%;
+    height: 60%;
+    max-height: 225px;
+    text-align: center;
+    top: 8%;
+    left: 18.5%;
+    position: relative;
+    border-radius: 10px;
+    border: 6px solid #d3d3d3;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.title {
+    width: 100%;
+    position: relative;
+    top: 10%;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.jp li {
+    font-size: 70% !important;
+    margin: 0 auto;
+    padding: 0 0 0 5%;
+    letter-spacing: 2px;
+}
+
+.game-screen p {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-screen li {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.6vw;
+    height: 98%;
+}
+
+.screen-ul {
+    height: 92%;
+    width: 95%;
+    position: absolute;
+}
+
+.select-menu {
+    position: absolute;
+    height: 90%;
+    width: 95%;
+    display: none;
+}
+
+.select-menu p {
+    width: 100%;
+    position: absolute;
+}
+
+.select-menu ul {
+    height: 100%;
+    padding-top: 10%;
+    padding-left: 0;
+}
+
+.select-menu li {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 75%;
+    height: 35%;
+}
+
+.menu.jp {
+    font-size: 1.9vw;
+}
+
+.selected::before {
+    content: "▶ ";
+    font-family: 'PixelMplus12-Regular';
+    font-size: 123%;
+}
+
+.introduction-screen {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.status-screen {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.basic-info-box {
+    font-size: 70%;
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    border: 3px solid #fff;
+    height: 45%;
+    width: 32.5%;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.basic-info-box p {
+    position: absolute;
+    height: 2.3vw;
+    top: -9%;
+    left: 27%;
+    padding-left: 3px;
+    padding-right: 1px;
+    background-color: black;
+}
+
+.basic-info-box ul {
+    height: 100%;
+    padding: 5% 2%;
+}
+
+.basic-info-box li {
+    font-size: 1vw;
+    position: relative;
+    top: 3%;
+    height: 16%;
+    float: right;
+    margin-top: 1.4%;
+    margin-bottom: 1.4%;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.equipment-box {
+    position: absolute;
+    top: 54.5%;
+    left: 15%;
+    border: 3px solid #fff;
+    height: 39%;
+    width: 32.5%;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.equipment-box ul {
+    height: 100%;
+    padding: 5% 2%;
+}
+
+.equipment-box li {
+    font-size: 1vw;
+    position: relative;
+    top: 5%;
+    height: 19%;
+    float: left;
+    margin-top: 1.4%;
+    margin-bottom: 1.4%;
+}
+
+.status-box {
+    position: absolute;
+    top: 7%;
+    left: 48.8%;
+    border: 3px solid #fff;
+    height: 86.5%;
+    width: 33.5%;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.status-box ul {
+    height: 100%;
+    padding: 5% 6% 3% 5%;
+}
+
+.status-box li {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1vw;
+    position: relative;
+    top: 1%;
+    height: 8.1%;
+    float: right;
+    margin-top: 1.4%;
+    margin-bottom: 1.4%;
+}
+
+.setting-screen {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.language-container {
+    float: left;
+    position: relative;
+    left: 10%;
+    width: 45%;
+    padding: 30px;
+}
+
+.language p {
+    height: 50%;
+}
+
+.language::before {
+    content: "";
+    position: absolute;
+    transform: scale(0.45);
+    top: 20px;
+    left: -3px;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    box-shadow:4px 4px 0 transparent,  8px 4px 0 transparent,  12px 4px 0 transparent,  16px 4px 0 transparent,  20px 4px 0 transparent,  24px 4px 0 rgb(255, 255, 255),  28px 4px 0 rgb(255, 255, 255),  32px 4px 0 rgb(255, 255, 255),  36px 4px 0 rgb(255, 255, 255),  40px 4px 0 rgb(255, 255, 255),  44px 4px 0 transparent,  48px 4px 0 transparent,  52px 4px 0 transparent,  56px 4px 0 transparent,  60px 4px 0 transparent,  4px 8px 0 transparent,  8px 8px 0 transparent,  12px 8px 0 transparent,  16px 8px 0 rgb(255, 255, 255),  20px 8px 0 rgb(255, 255, 255),  24px 8px 0 transparent,  28px 8px 0 transparent,  32px 8px 0 transparent,  36px 8px 0 transparent,  40px 8px 0 transparent,  44px 8px 0 rgb(255, 255, 255),  48px 8px 0 rgb(255, 255, 255),  52px 8px 0 transparent,  56px 8px 0 transparent,  60px 8px 0 transparent,  4px 12px 0 transparent,  8px 12px 0 transparent,  12px 12px 0 rgb(255, 255, 255),  16px 12px 0 transparent,  20px 12px 0 transparent,  24px 12px 0 transparent,  28px 12px 0 transparent,  32px 12px 0 transparent,  36px 12px 0 transparent,  40px 12px 0 transparent,  44px 12px 0 transparent,  48px 12px 0 transparent,  52px 12px 0 rgb(255, 255, 255),  56px 12px 0 transparent,  60px 12px 0 transparent,  4px 16px 0 transparent,  8px 16px 0 rgb(255, 255, 255),  12px 16px 0 transparent,  16px 16px 0 transparent,  20px 16px 0 transparent,  24px 16px 0 transparent,  28px 16px 0 transparent,  32px 16px 0 transparent,  36px 16px 0 transparent,  40px 16px 0 transparent,  44px 16px 0 transparent,  48px 16px 0 transparent,  52px 16px 0 transparent,  56px 16px 0 rgb(255, 255, 255),  60px 16px 0 transparent,  4px 20px 0 transparent,  8px 20px 0 rgb(255, 255, 255),  12px 20px 0 transparent,  16px 20px 0 transparent,  20px 20px 0 transparent,  24px 20px 0 transparent,  28px 20px 0 transparent,  32px 20px 0 transparent,  36px 20px 0 transparent,  40px 20px 0 transparent,  44px 20px 0 transparent,  48px 20px 0 transparent,  52px 20px 0 transparent,  56px 20px 0 rgb(255, 255, 255),  60px 20px 0 transparent,  4px 24px 0 rgb(255, 255, 255),  8px 24px 0 transparent,  12px 24px 0 transparent,  16px 24px 0 transparent,  20px 24px 0 transparent,  24px 24px 0 transparent,  28px 24px 0 transparent,  32px 24px 0 transparent,  36px 24px 0 transparent,  40px 24px 0 transparent,  44px 24px 0 transparent,  48px 24px 0 transparent,  52px 24px 0 transparent,  56px 24px 0 transparent,  60px 24px 0 rgb(255, 255, 255),  4px 28px 0 rgb(255, 255, 255),  8px 28px 0 transparent,  12px 28px 0 transparent,  16px 28px 0 transparent,  20px 28px 0 transparent,  24px 28px 0 transparent,  28px 28px 0 transparent,  32px 28px 0 transparent,  36px 28px 0 transparent,  40px 28px 0 transparent,  44px 28px 0 transparent,  48px 28px 0 transparent,  52px 28px 0 transparent,  56px 28px 0 transparent,  60px 28px 0 rgb(255, 255, 255),  4px 32px 0 rgb(255, 255, 255),  8px 32px 0 transparent,  12px 32px 0 transparent,  16px 32px 0 transparent,  20px 32px 0 transparent,  24px 32px 0 transparent,  28px 32px 0 transparent,  32px 32px 0 transparent,  36px 32px 0 transparent,  40px 32px 0 transparent,  44px 32px 0 transparent,  48px 32px 0 transparent,  52px 32px 0 transparent,  56px 32px 0 transparent,  60px 32px 0 rgb(255, 255, 255),  4px 36px 0 rgb(255, 255, 255),  8px 36px 0 transparent,  12px 36px 0 transparent,  16px 36px 0 transparent,  20px 36px 0 transparent,  24px 36px 0 transparent,  28px 36px 0 transparent,  32px 36px 0 transparent,  36px 36px 0 transparent,  40px 36px 0 transparent,  44px 36px 0 transparent,  48px 36px 0 transparent,  52px 36px 0 transparent,  56px 36px 0 transparent,  60px 36px 0 rgb(255, 255, 255),  4px 40px 0 rgb(255, 255, 255),  8px 40px 0 transparent,  12px 40px 0 transparent,  16px 40px 0 transparent,  20px 40px 0 transparent,  24px 40px 0 transparent,  28px 40px 0 transparent,  32px 40px 0 transparent,  36px 40px 0 transparent,  40px 40px 0 transparent,  44px 40px 0 transparent,  48px 40px 0 transparent,  52px 40px 0 transparent,  56px 40px 0 transparent,  60px 40px 0 rgb(255, 255, 255),  4px 44px 0 transparent,  8px 44px 0 rgb(255, 255, 255),  12px 44px 0 transparent,  16px 44px 0 transparent,  20px 44px 0 transparent,  24px 44px 0 transparent,  28px 44px 0 transparent,  32px 44px 0 transparent,  36px 44px 0 transparent,  40px 44px 0 transparent,  44px 44px 0 transparent,  48px 44px 0 transparent,  52px 44px 0 transparent,  56px 44px 0 rgb(255, 255, 255),  60px 44px 0 transparent,  4px 48px 0 transparent,  8px 48px 0 rgb(255, 255, 255),  12px 48px 0 transparent,  16px 48px 0 transparent,  20px 48px 0 transparent,  24px 48px 0 transparent,  28px 48px 0 transparent,  32px 48px 0 transparent,  36px 48px 0 transparent,  40px 48px 0 transparent,  44px 48px 0 transparent,  48px 48px 0 transparent,  52px 48px 0 transparent,  56px 48px 0 rgb(255, 255, 255),  60px 48px 0 transparent,  4px 52px 0 transparent,  8px 52px 0 transparent,  12px 52px 0 rgb(255, 255, 255),  16px 52px 0 transparent,  20px 52px 0 transparent,  24px 52px 0 transparent,  28px 52px 0 transparent,  32px 52px 0 transparent,  36px 52px 0 transparent,  40px 52px 0 transparent,  44px 52px 0 transparent,  48px 52px 0 transparent,  52px 52px 0 rgb(255, 255, 255),  56px 52px 0 transparent,  60px 52px 0 transparent,  4px 56px 0 transparent,  8px 56px 0 transparent,  12px 56px 0 transparent,  16px 56px 0 rgb(255, 255, 255),  20px 56px 0 rgb(255, 255, 255),  24px 56px 0 transparent,  28px 56px 0 transparent,  32px 56px 0 transparent,  36px 56px 0 transparent,  40px 56px 0 transparent,  44px 56px 0 rgb(255, 255, 255),  48px 56px 0 rgb(255, 255, 255),  52px 56px 0 transparent,  56px 56px 0 transparent,  60px 56px 0 transparent,  4px 60px 0 transparent,  8px 60px 0 transparent,  12px 60px 0 transparent,  16px 60px 0 transparent,  20px 60px 0 transparent,  24px 60px 0 rgb(255, 255, 255),  28px 60px 0 rgb(255, 255, 255),  32px 60px 0 rgb(255, 255, 255),  36px 60px 0 rgb(255, 255, 255),  40px 60px 0 rgb(255, 255, 255),  44px 60px 0 transparent,  48px 60px 0 transparent,  52px 60px 0 transparent,  56px 60px 0 transparent,  60px 60px 0 transparent;
+    -webkit-transform: scale(0.45);
+    -moz-transform: scale(0.45);
+    -ms-transform: scale(0.45);
+    -o-transform: scale(0.45);
+}
+
+.selected-language::after {
+    content: "";
+    position: absolute;
+    transform: scale(0.45);
+    top: 20px;
+    left: -3px;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    box-shadow:4px 4px 0 transparent,8px 4px 0 transparent,12px 4px 0 transparent,16px 4px 0 transparent,20px 4px 0 transparent,24px 4px 0 transparent,28px 4px 0 transparent,32px 4px 0 transparent,36px 4px 0 transparent,40px 4px 0 transparent,44px 4px 0 transparent,48px 4px 0 transparent,52px 4px 0 transparent,56px 4px 0 transparent,60px 4px 0 transparent,4px 8px 0 transparent,8px 8px 0 transparent,12px 8px 0 transparent,16px 8px 0 transparent,20px 8px 0 transparent,24px 8px 0 transparent,28px 8px 0 transparent,32px 8px 0 transparent,36px 8px 0 transparent,40px 8px 0 transparent,44px 8px 0 transparent,48px 8px 0 transparent,52px 8px 0 transparent,56px 8px 0 transparent,60px 8px 0 transparent,4px 12px 0 transparent,8px 12px 0 transparent,12px 12px 0 transparent,16px 12px 0 transparent,20px 12px 0 transparent,24px 12px 0 transparent,28px 12px 0 transparent,32px 12px 0 transparent,36px 12px 0 transparent,40px 12px 0 transparent,44px 12px 0 transparent,48px 12px 0 transparent,52px 12px 0 transparent,56px 12px 0 transparent,60px 12px 0 transparent,4px 16px 0 transparent,8px 16px 0 transparent,12px 16px 0 transparent,16px 16px 0 transparent,20px 16px 0 transparent,24px 16px 0 transparent,28px 16px 0 rgb(255, 255, 255),32px 16px 0 rgb(255, 255, 255),36px 16px 0 rgb(255, 255, 255),40px 16px 0 transparent,44px 16px 0 transparent,48px 16px 0 transparent,52px 16px 0 transparent,56px 16px 0 transparent,60px 16px 0 transparent,4px 20px 0 transparent,8px 20px 0 transparent,12px 20px 0 transparent,16px 20px 0 transparent,20px 20px 0 rgb(255, 255, 255),24px 20px 0 rgb(255, 255, 255),28px 20px 0 rgb(255, 255, 255),32px 20px 0 rgb(255, 255, 255),36px 20px 0 rgb(255, 255, 255),40px 20px 0 rgb(255, 255, 255),44px 20px 0 rgb(255, 255, 255),48px 20px 0 transparent,52px 20px 0 transparent,56px 20px 0 transparent,60px 20px 0 transparent,4px 24px 0 transparent,8px 24px 0 transparent,12px 24px 0 transparent,16px 24px 0 transparent,20px 24px 0 rgb(255, 255, 255),24px 24px 0 rgb(255, 255, 255),28px 24px 0 rgb(255, 255, 255),32px 24px 0 rgb(255, 255, 255),36px 24px 0 rgb(255, 255, 255),40px 24px 0 rgb(255, 255, 255),44px 24px 0 rgb(255, 255, 255),48px 24px 0 transparent,52px 24px 0 transparent,56px 24px 0 transparent,60px 24px 0 transparent,4px 28px 0 transparent,8px 28px 0 transparent,12px 28px 0 transparent,16px 28px 0 rgb(255, 255, 255),20px 28px 0 rgb(255, 255, 255),24px 28px 0 rgb(255, 255, 255),28px 28px 0 rgb(255, 255, 255),32px 28px 0 rgb(255, 255, 255),36px 28px 0 rgb(255, 255, 255),40px 28px 0 rgb(255, 255, 255),44px 28px 0 rgb(255, 255, 255),48px 28px 0 rgb(255, 255, 255),52px 28px 0 transparent,56px 28px 0 transparent,60px 28px 0 transparent,4px 32px 0 transparent,8px 32px 0 transparent,12px 32px 0 transparent,16px 32px 0 rgb(255, 255, 255),20px 32px 0 rgb(255, 255, 255),24px 32px 0 rgb(255, 255, 255),28px 32px 0 rgb(255, 255, 255),32px 32px 0 rgb(255, 255, 255),36px 32px 0 rgb(255, 255, 255),40px 32px 0 rgb(255, 255, 255),44px 32px 0 rgb(255, 255, 255),48px 32px 0 rgb(255, 255, 255),52px 32px 0 transparent,56px 32px 0 transparent,60px 32px 0 transparent,4px 36px 0 transparent,8px 36px 0 transparent,12px 36px 0 transparent,16px 36px 0 rgb(255, 255, 255),20px 36px 0 rgb(255, 255, 255),24px 36px 0 rgb(255, 255, 255),28px 36px 0 rgb(255, 255, 255),32px 36px 0 rgb(255, 255, 255),36px 36px 0 rgb(255, 255, 255),40px 36px 0 rgb(255, 255, 255),44px 36px 0 rgb(255, 255, 255),48px 36px 0 rgb(255, 255, 255),52px 36px 0 transparent,56px 36px 0 transparent,60px 36px 0 transparent,4px 40px 0 transparent,8px 40px 0 transparent,12px 40px 0 transparent,16px 40px 0 transparent,20px 40px 0 rgb(255, 255, 255),24px 40px 0 rgb(255, 255, 255),28px 40px 0 rgb(255, 255, 255),32px 40px 0 rgb(255, 255, 255),36px 40px 0 rgb(255, 255, 255),40px 40px 0 rgb(255, 255, 255),44px 40px 0 rgb(255, 255, 255),48px 40px 0 transparent,52px 40px 0 transparent,56px 40px 0 transparent,60px 40px 0 transparent,4px 44px 0 transparent,8px 44px 0 transparent,12px 44px 0 transparent,16px 44px 0 transparent,20px 44px 0 rgb(255, 255, 255),24px 44px 0 rgb(255, 255, 255),28px 44px 0 rgb(255, 255, 255),32px 44px 0 rgb(255, 255, 255),36px 44px 0 rgb(255, 255, 255),40px 44px 0 rgb(255, 255, 255),44px 44px 0 rgb(255, 255, 255),48px 44px 0 transparent,52px 44px 0 transparent,56px 44px 0 transparent,60px 44px 0 transparent,4px 48px 0 transparent,8px 48px 0 transparent,12px 48px 0 transparent,16px 48px 0 transparent,20px 48px 0 transparent,24px 48px 0 transparent,28px 48px 0 rgb(255, 255, 255),32px 48px 0 rgb(255, 255, 255),36px 48px 0 rgb(255, 255, 255),40px 48px 0 transparent,44px 48px 0 transparent,48px 48px 0 transparent,52px 48px 0 transparent,56px 48px 0 transparent,60px 48px 0 transparent,4px 52px 0 transparent,8px 52px 0 transparent,12px 52px 0 transparent,16px 52px 0 transparent,20px 52px 0 transparent,24px 52px 0 transparent,28px 52px 0 transparent,32px 52px 0 transparent,36px 52px 0 transparent,40px 52px 0 transparent,44px 52px 0 transparent,48px 52px 0 transparent,52px 52px 0 transparent,56px 52px 0 transparent,60px 52px 0 transparent,4px 56px 0 transparent,8px 56px 0 transparent,12px 56px 0 transparent,16px 56px 0 transparent,20px 56px 0 transparent,24px 56px 0 transparent,28px 56px 0 transparent,32px 56px 0 transparent,36px 56px 0 transparent,40px 56px 0 transparent,44px 56px 0 transparent,48px 56px 0 transparent,52px 56px 0 transparent,56px 56px 0 transparent,60px 56px 0 transparent,4px 60px 0 transparent,8px 60px 0 transparent,12px 60px 0 transparent,16px 60px 0 transparent,20px 60px 0 transparent,24px 60px 0 transparent,28px 60px 0 transparent,32px 60px 0 transparent,36px 60px 0 transparent,40px 60px 0 transparent,44px 60px 0 transparent,48px 60px 0 transparent,52px 60px 0 transparent,56px 60px 0 transparent,60px 60px 0 transparent;
+    -webkit-transform: scale(0.45);
+    -moz-transform: scale(0.45);
+    -ms-transform: scale(0.45);
+    -o-transform: scale(0.45);
+}
+
+.language-jp {
+    font-family: 'PixelMplus10-bold' !important;
+}
+
+.btn-wrapper {
+    display: flex;
+    position: relative;
+    top: 8%;
+    width: 95%;
+    height: 27%;
+    margin: 0% 2% 0% 2%;
+}
+
+.cross-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    width: 13.5%;
+    height: 100%;
+    margin: 0% 35% 0% 2%;
+}
+
+.cross-btn {
+    background-color: #432f24;
+}
+
+.cross-top {
+    grid-row: 1 / 2;
+    grid-column: 2/ 3;
+    border-right: 2px solid #24140e;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2Spx;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cross-right {
+    grid-row: 2 / 3;
+    grid-column : 3 / 4;
+    border-right: 1.5px solid #24140e;
+    border-bottom: 1.5px solid #24140e;
+    border-top-right-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cross-bottom {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    border-right: 2px solid #24140e;
+    border-bottom: 1.5px solid #24140e;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cross-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-top-left-radius: 1px;
+}
+
+.cross-center {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.ab-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    text-align: center;
+    width: 13.5%;
+    height: 100%;
+    margin: 0% 2% 0% 35%;
+}
+
+.ab-btn {
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ab-btn p {
+    position: relative;
+    left: 5%;
+    top: 5%;
+}
+
+.ab-btn:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.ab-top {
+    grid-row: 1 / 2;
+    grid-column: 2/ 3;
+    background-color: #e3364a;
+    box-shadow: 0 2px 0 #ca1c30;
+}
+
+.ab-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    background-color: #61b0e2;
+    box-shadow: 0 2px 0 #369ada;
+}
